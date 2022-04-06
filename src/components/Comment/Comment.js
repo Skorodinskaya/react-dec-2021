@@ -1,7 +1,5 @@
-export const Comment = () => {
+export const Comment = ({comment}) => {
     return (
-        <div>
-        
-        </div>
+        <div>{comment.id} - {comment.body}</div>
     );
 }

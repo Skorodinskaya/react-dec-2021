@@ -1,8 +1,9 @@
-import {Outlet, NavLink} from 'react-router-dom'
+import {Outlet, NavLink, useNavigate} from 'react-router-dom'
 
 import css from './MainLayout.module.css'
 
 export const MainLayout = () => {
+    const navigate = useNavigate();
     return (
         <div>
             <div className={css.header}>
@@ -12,6 +13,10 @@ export const MainLayout = () => {
                 <NavLink to='/about'>About</NavLink>
             </div>
             <hr/>
+            <div>
+                <button onClick={() => navigate(-1)}>prev</button>
+                <button onClick={() => navigate(1)}>next</button>
+            </div>
             <Outlet/>
         </div>
     );

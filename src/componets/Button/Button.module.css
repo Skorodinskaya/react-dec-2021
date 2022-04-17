@@ -1,12 +1,9 @@
 .button {
-    width: 200px;
-    height: 100px;
-    color: red;
-    font-size: 50px;
+    color: #bd78f0;
     cursor: pointer;
 }
 
 .button:hover {
-    background-color: red;
+    background-color: #bd78f0;
     color: white;
 }

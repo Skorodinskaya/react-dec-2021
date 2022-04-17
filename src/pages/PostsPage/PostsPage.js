@@ -1,16 +1,19 @@
 import {useEffect, useState} from "react";
+import {Outlet} from 'react-router-dom'
+
 import {postService} from "../../services";
-import {Post} from "../Post/Post";
+import {Post} from "../../componets";
+
 
 export const PostsPage = () => {
     const [posts, setPosts] = useState([])
     useEffect(() => {
         postService.getAll().then(({data}) => setPosts(data))
     })
-    console.log(posts);
     return (
-        <div>
-            {posts.map(post => <Post key={post.id} post={post}/>)}
+        <div style={{display: 'flex'}}>
+            <div>{posts.map(post => <Post key={post.id} post={post}/>)}</div>
+            <div><Outlet/></div>
         </div>
     );
 }

@@ -1,17 +1,14 @@
-import css from './css.module.css'
+import css from './Post.module.css'
 import {Button} from "../index";
-// import {useNavigate} from "react-router-dom";
 
-export const Post = ({post}) => {
-    // const navigate = useNavigate();
+export const Post = ({post, flag}) => {
     const {id, title} = post;
     return (
         <div className={css.wrapper}>
             <div>{id} -- {title}</div>
-            <div><Button to={`${id}`} state={post}>get Details</Button></div>
-
-            {/*<div>{id} -- {title}</div>*/}
-            {/*<button onClick={() => navigate(id.toString())}>go to users</button>*/}
+            {
+                flag && <div><Button to={`${id}`} state={post}>get Details</Button></div>
+            }
         </div>
     );
 }

@@ -4,5 +4,6 @@ export * from './NotFoundPage/NotFoundPage';
 export * from './UsersPage/UsersPage';
 export * from './SinglePostPage/SinglePostPage';
 export * from './PostsPage/PostsPage'
+export * from './SingleUserPage/SingleUserPage'
 
 
